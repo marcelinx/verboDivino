@@ -1,16 +1,38 @@
-<header class="catholic-church-header">
+<div class="catholic-church-header">
   <div class="container">
     <div class="logo">
-      <img src="../../../assets/img/verbodivino-logo.png" alt="Igreja Católica">
+      <img
+        src="../../../assets/img/verbodivino-logo.png"
+        alt="Imagem de navegação"
+      />
     </div>
-    <nav class="navigation">
-      <ul>
-        <li><a href="/">Página Inicial</a></li>
-        <li><a href="/">Sobre Nós</a></li>
-        <li><a href="/">Serviços</a></li>
-        <li><a href="/">Eventos</a></li>
-        <li><a href="/">Contato</a></li>
+    <div class="navigation">
+      <ul class="nav-list">
+        <li>
+          <a href="/"> <i class="material-icons">home</i> Pagina Inicial </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="material-icons">account_circle</i> Sobre Nós
+          </a>
+        </li>
+        <li>
+          <a href="/"> <i class="material-icons">work</i> Serviços </a>
+        </li>
+        <li>
+          <a href="/"> <i class="material-icons">event</i> Eventos </a>
+        </li>
+        <li>
+          <a href="/"> <i class="material-icons">call</i> Contato </a>
+        </li>
       </ul>
-    </nav>
+    </div>
   </div>
-</header>
+
+  <div class="sidenav-content">
+    <button class="menu mat-elevation-z8" onclick="toggleDrawer()">
+      <i class="material-icons">menu</i>
+    </button>
+  </div>
+</div>
+<router-outlet></router-outlet>
