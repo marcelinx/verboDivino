@@ -1,0 +1,58 @@
+.catholic-church-header {
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .logo {
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+    }
+
+    .navigation {
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+
+        li {
+          margin: 0 20px;
+        }
+
+        a {
+          text-decoration: none;
+          color: #333;
+          transition: color 0.2s;
+
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      .navigation {
+        ul {
+          flex-direction: column;
+          margin-top: 10px;
+
+          li {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
