@@ -1,0 +1,134 @@
+/* Paleta de cores neutras */
+$cor-primaria: #333;
+$cor-secundaria: #666;
+$cor-destaque: #ff9900;
+$cor-texto: #333;
+$cor-fundo: #f9f9f9;
+$cor-pressao: #6C3483;
+
+.hero {
+    background-image: url('../../../assets/img/church_background.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: $cor-fundo;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: $cor-destaque;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: $cor-pressao;
+}
+
+/* Seção "Sobre Nós" */
+.about {
+    background-color: $cor-fundo;
+    padding: 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 24px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Seção "Nossos Serviços" */
+.services {
+    background-color: $cor-fundo;
+    padding: 40px;
+}
+
+services h2 {
+    font-size: 24px;
+}
+
+services p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Seção "Próximos Eventos" */
+.events {
+    background-color: $cor-fundo;
+    padding: 40px;
+}
+
+events h2 {
+    font-size: 24px;
+}
+
+.event {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.event h3 {
+    font-size: 20px;
+}
+
+event p {
+    font-size: 16px;
+}
+
+/* Seção de Contato */
+.contact {
+    background-color: $cor-primaria;
+    color: #fff;
+    padding: 40px;
+}
+
+contact h2 {
+    font-size: 24px;
+}
+
+contact p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+contact li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
