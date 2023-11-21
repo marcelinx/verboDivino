@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mainscreen.component.html',
   styleUrls: ['./mainscreen.component.scss'],
 })
-export class MainScreenComponent implements OnInit {
+export class MainScreenComponent {
+
   constructor() {}
 
   ngOnInit(): void {}
