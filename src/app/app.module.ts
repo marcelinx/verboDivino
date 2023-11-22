@@ -10,6 +10,7 @@ import { ServicosCarrouselComponent } from './components/home/servicos-carrousel
 import { NavComponent } from './components/nav/nav.component';
 
 import { MainScreenComponent } from './components/mainScreen/mainscreen.component';
+import { FooterComponent } from './components/home/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MainScreenComponent } from './components/mainScreen/mainscreen.componen
     HomeComponent,
     ServicosCarrouselComponent,
     NavComponent,
-    MainScreenComponent
+    MainScreenComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
