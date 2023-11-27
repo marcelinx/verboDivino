@@ -9,4 +9,5 @@ import { telaPrincipal } from '../constants/messages.constants';
 
 export class HomeComponent {
   messages = telaPrincipal;
+  comunidades = telaPrincipal.comunidades;
 }
