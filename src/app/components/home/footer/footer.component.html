@@ -1,7 +1,11 @@
 <footer class="footer">
   <div class="social-icons">
-    <a *ngFor="let icon of footerInfo.socialIcons" [href]="icon.link" target="_blank"><i class="fab {{ icon.platform | lowercase }}"></i></a>
+    <a *ngFor="let icon of footerInfo.socialIcons" [href]="icon.link" target="_blank">
+      <i *ngIf="icon.platform === 'Facebook'" class="fab fa-facebook-f"></i>
+      <i *ngIf="icon.platform === 'Instagram'" class="fab fa-instagram"></i>
+    </a>
   </div>
+
   <section class="contact">
     <h2>{{ footerInfo.contact.title }}</h2>
     <p>
@@ -13,6 +17,10 @@
         <a href="mailto:{{ footerInfo.contact.details[0].address }}">{{ footerInfo.contact.details[0].address }}</a>
       </li>
       <li>Telefone: {{ footerInfo.contact.details[1].number }}</li>
+      <li class="secretary-info">
+        <i class="fas fa-phone"></i>
+        Secretaria: {{ footerInfo.contact.details[2].type }} - {{ footerInfo.contact.details[2].schedule }}
+      </li>
     </ul>
   </section>
 

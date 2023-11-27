@@ -29,15 +29,11 @@ export const footerInfo = {
   socialIcons: [
     {
       platform: 'Facebook',
-      link: 'https://www.facebook.com/suapagina'
-    },
-    {
-      platform: 'Twitter',
-      link: 'https://twitter.com/suapagina'
+      link: 'https://www.facebook.com/verbodivinooficial/'
     },
     {
       platform: 'Instagram',
-      link: 'https://twitter.com/suapagina'
+      link: 'https://www.instagram.com/oficialverbodivino/'
     }
   ],
   contact: {
@@ -51,6 +47,10 @@ export const footerInfo = {
       {
         type: 'Telefone',
         number: '(11) 5517-1664'
+      },
+      {
+        type: 'Secretaria',
+        schedule: 'Segunda a sábado, das 9h às 17h'
       }
     ]
   },

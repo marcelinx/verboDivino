@@ -1,15 +1,15 @@
 <div class="catholic-church-header">
-  <div class="container">
+  <div class="container" [class.show-menu]="showMenu">
     <div class="logo">
-      <img
-        src="../../../assets/img/verbodivino-logo.png"
-        alt="Imagem de navegação"
-      />
+      <img src="../../../assets/img/verbodivino-logo.png" alt="Imagem de navegação" />
+    </div>
+    <div class="mobile-menu-icon" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
     <div class="navigation">
       <ul class="nav-list">
         <li>
-          <a href="/">
+          <a href="#">
             <i class="material-icons">home</i>
             {{ messages.titulo01 }}
           </a>

@@ -92,6 +92,19 @@ $cor-pressao: #040FD9;
           }
         }
       }
+
+      .secretary-info {
+        background-color: darken($cor-destaque, 10%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      i {
+        padding-right: 10px;
+      }
     }
   }
 
