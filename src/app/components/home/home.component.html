@@ -6,25 +6,59 @@
 </section>
 
 <section class="about">
-  <h2>{{ messages.sobreNos }}</h2>
-  <p>
-    {{ messages.contandoSobre }}
-  </p>
+  <h1>{{ messages.sobreNos }}</h1>
+  <h2>{{ messages.contandoSobre }}</h2>
+
+  <h3>Comunidades</h3>
+  <div class="community-cards">
+    <!-- Loop para as comunidades -->
+    <div class="community-card" *ngFor="let comunidade of comunidades">
+      <div class="church-icon">
+        <i class="fas fa-church"></i>
+      </div>
+      <h3>{{ comunidade.nome }}</h3>
+      <p *ngIf="comunidade.horarioMissas">{{ comunidade.horarioMissas }}</p>
+      <p>{{ comunidade.endereco }}</p>
+    </div>
+  </div>
 </section>
+
+
 
 <app-servicos-carrousel></app-servicos-carrousel>
 
 <section class="events">
-  <h2>{{ messages.eventoTitulo }}</h2>
+  <h2>
+    <span class="blue-circle"><i class="fas fa-place-of-worship"></i></span>
+    {{ messages.eventoTitulo }}
+  </h2>
   <div class="event">
-    <h3>Culto de Domingo</h3>
-    <p>Data: XX/XX/XXXX</p>
-    <p>Horário: XX:XX AM</p>
+    <h3>
+      <span class="blue-circle"><i class="fas fa-clock"></i></span> {{ messages.eventoMissas.titulo }}
+    </h3>
+    <p>
+      {{ messages.eventoMissas.descricao }}
+    </p>
+    <ul>
+      <li *ngFor="let horario of messages.eventoMissas.horarios.domingo">
+        <strong>Domingo:</strong> {{ horario }}
+      </li>
+      <li *ngFor="let horario of messages.eventoMissas.horarios.quarta">
+        <strong>Quarta:</strong> {{ horario }}
+      </li>
+    </ul>
   </div>
+
   <div class="event">
-    <h3>Grupo de Oração</h3>
-    <p>Data: XX/XX/XXXX</p>
-    <p>Horário: XX:XX PM</p>
+    <h3>
+      <span class="blue-circle"><i class="fas fa-praying-hands"></i></span> {{ messages.eventoAdoracao.titulo }}
+    </h3>
+    <ul>
+      <li>
+        <strong>Quinta:</strong> {{ messages.eventoAdoracao.horarios.quinta }}
+      </li>
+    </ul>
   </div>
 </section>
+
 <app-footer></app-footer>
