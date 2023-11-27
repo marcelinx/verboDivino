@@ -2,20 +2,32 @@
 
 $cor-primaria: #333;
 $cor-secundaria: #666;
-$cor-destaque: #ff9900; /* Cor de destaque suave */
-
+$cor-destaque: #F2C029;
 $cor-texto: #333;
 $cor-fundo: #f9f9f9;
-$cor-pressao: #6C3483;
+$cor-pressao: #040FD9;
 
 .footer {
-  background-color: $cor-destaque; /* Cor de destaque no fundo do footer */
+  background-color: $cor-destaque;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+
+  .social-icons,
+  .church-info,
+  .contact {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
 
   .social-icons {
+    display: flex;
+    justify-content: center;
+
     a {
       color: $cor-primaria;
       text-decoration: none;
@@ -24,13 +36,14 @@ $cor-pressao: #6C3483;
       transition: color 0.3s ease;
 
       &:hover {
-        color: $cor-destaque; /* Cor do Facebook */
+        color: $cor-pressao;
       }
     }
   }
 
   .church-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
 
     p {
@@ -41,14 +54,13 @@ $cor-pressao: #6C3483;
 
     .fa-cross {
       font-size: 24px;
-      color: $cor-primaria; /* Cor da cruz */
-      margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
+      color: $cor-primaria;
+      margin-top: 10px;
     }
   }
 
   .contact {
-    margin-top: 20px;
-    padding: 20px;
+    text-align: left;
 
     h2 {
       font-size: 18px;
@@ -74,10 +86,40 @@ $cor-pressao: #6C3483;
         a {
           color: $cor-primaria;
           text-decoration: none;
+
           &:hover {
-            color: $cor-destaque; /* Cor de destaque para o link de e-mail */
+            color: $cor-pressao;
           }
         }
+      }
+
+      .secretary-info {
+        background-color: darken($cor-destaque, 10%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    .social-icons,
+    .church-info,
+    .contact {
+      width: auto;
+      max-width: none;
+      margin-bottom: 0;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

@@ -7,9 +7,12 @@ import { cabecalho } from '../constants/messages.constants';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
   messages = cabecalho;
+  showMenu = false;
 
   constructor() {}
 
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 }

@@ -1,40 +1,76 @@
 .catholic-church-header {
   background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: space-between;
 
     .logo {
       img {
-        max-width: 100px;
+        max-width: 150px;
         height: auto;
       }
     }
 
     .navigation {
-      ul {
+      ul.nav-list {
         list-style: none;
-        padding: 0;
         display: flex;
+        margin: 0;
+        padding: 0;
 
         li {
-          margin: 0 20px;
+          margin-right: 20px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            text-decoration: none;
+            color: #333;
+
+            i {
+              margin-right: 5px;
+            }
+          }
         }
+      }
+    }
 
-        a {
-          text-decoration: none;
-          color: #333;
-          transition: color 0.2s;
+    .mobile-menu-icon {
+      display: none;
+      cursor: pointer;
 
-          &:hover {
-            color: #6C3483;
+      & i {
+        font-size: 24px;
+      }
+    }
+
+    &.show-menu {
+      .navigation {
+        display: block;
+        flex-direction: column;
+        animation: slideIn 0.3s ease-in-out forwards;
+
+        ul.nav-list {
+          flex-direction: row;
+          align-items: flex-start;
+          padding: 10px;
+          opacity: 1;
+          animation: fadeIn 0.3s ease-in-out forwards;
+        }
+      }
+
+      &.close-menu {
+        .navigation {
+          animation: slideOut 0.3s ease-in-out forwards;
+
+          ul.nav-list {
+            animation: fadeOut 0.3s ease-in-out forwards;
           }
         }
       }
@@ -43,16 +79,59 @@
 
   @media screen and (max-width: 768px) {
     .container {
-      .navigation {
-        ul {
-          flex-direction: column;
-          margin-top: 10px;
+      .mobile-menu-icon {
+        display: block;
+      }
 
-          li {
-            margin: 10px 0;
-          }
+      .navigation {
+        display: none;
+      }
+
+      &.show-menu {
+        .navigation {
+          display: block;
         }
       }
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
     }
   }
 }

@@ -1,26 +1,31 @@
 <footer class="footer">
   <div class="social-icons">
-    <a href="https://www.facebook.com/suapagina" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/suapagina" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://twitter.com/suapagina" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-  <div class="church-info">
-    <p>&copy; 2023 Nome da Igreja</p>
-    <i class="fas fa-cross"></i>
+    <a *ngFor="let icon of footerInfo.socialIcons" [href]="icon.link" target="_blank">
+      <i *ngIf="icon.platform === 'Facebook'" class="fab fa-facebook-f"></i>
+      <i *ngIf="icon.platform === 'Instagram'" class="fab fa-instagram"></i>
+    </a>
   </div>
 
   <section class="contact">
-    <h2>Contato</h2>
+    <h2>{{ footerInfo.contact.title }}</h2>
     <p>
-      Estamos aqui para ajudar. Entre em contato conosco se tiver alguma pergunta
-      ou necessidade.
+      {{ footerInfo.contact.description }}
     </p>
     <ul>
       <li>
         Email:
-        <a href="mailto:paroquia.verbodivino@gmail.com">paroquia.verbodivino@gmail.com</a>
+        <a href="mailto:{{ footerInfo.contact.details[0].address }}">{{ footerInfo.contact.details[0].address }}</a>
       </li>
-      <li>Telefone: (11) 5517-1664</li>
+      <li>Telefone: {{ footerInfo.contact.details[1].number }}</li>
+      <li class="secretary-info">
+        <i class="fas fa-phone"></i>
+        Secretaria: {{ footerInfo.contact.details[2].type }} - {{ footerInfo.contact.details[2].schedule }}
+      </li>
     </ul>
   </section>
+
+  <div class="church-info">
+    <p>{{ footerInfo.churchInfo.copyright }}</p>
+    <i class="{{ footerInfo.churchInfo.symbol }}"></i>
+  </div>
 </footer>

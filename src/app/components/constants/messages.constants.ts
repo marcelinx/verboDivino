@@ -20,9 +20,42 @@ export const telaPrincipal = {
   conhecê-lo e compartilhar nossa fé com você.`,
   servicos: 'Nossos Serviços',
   descreveServicos: 'Oferecemos uma variedade de serviços para atender às necessidades espirituais de nossa comunidade, incluindo cultos, grupos de estudo e programas sociais.',
-  eventoTitulo: 'Próximos Eventos',
+  eventoTitulo: 'Eventos',
   contatoTitulo: 'Contato',
   contatoDescricao: 'Estamos aqui para ajudar. Entre em contato conosco se tiver alguma pergunta ou necessidade.',
-  contatoEmail: 'Email: contato@igrejasagrada.com',
-  contatoTelefone: 'Telefone: (XX) XXXX-XXXX',
+};
+
+export const footerInfo = {
+  socialIcons: [
+    {
+      platform: 'Facebook',
+      link: 'https://www.facebook.com/verbodivinooficial/'
+    },
+    {
+      platform: 'Instagram',
+      link: 'https://www.instagram.com/oficialverbodivino/'
+    }
+  ],
+  contact: {
+    title: 'Contato',
+    description: 'Estamos aqui para ajudar. Entre em contato conosco se tiver alguma pergunta ou necessidade.',
+    details: [
+      {
+        type: 'Email',
+        address: 'paroquia.verbodivino@gmail.com'
+      },
+      {
+        type: 'Telefone',
+        number: '(11) 5517-1664'
+      },
+      {
+        type: 'Secretaria',
+        schedule: 'Segunda a sábado, das 9h às 17h'
+      }
+    ]
+  },
+  churchInfo: {
+    copyright: '© 2023 Paróquia Verbo Divíno',
+    symbol: 'fas fa-cross'
+  }
 };
