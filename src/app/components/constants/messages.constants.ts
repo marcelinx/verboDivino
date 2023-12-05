@@ -21,7 +21,7 @@ export const telaPrincipal = {
     {
       nome: 'Sagrado Coração de Jesus',
       horarioMissas: 'Missas Dominicais: 10h00',
-      endereco: 'Rua Carlos Caprole, 164, Jd. Vera Cruz - São Paulo - SP, 04965-070'
+      endereco: 'R. Carlo Caproli, 164, Jd. Vera Cruz - São Paulo - SP, 04965-070'
     },
     {
       nome: 'Santa Edwiges',

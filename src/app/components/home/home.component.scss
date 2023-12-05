@@ -9,7 +9,7 @@ $cor-azul-circulo: #d5e7f2;
 .hero {
   background-image: url("../../../assets/img/church_background.png");
   background-size: cover;
-  background-position: center;
+  background-position: 50% 35%;
   text-align: center;
   color: $cor-fundo;
   padding: 100px 0;
@@ -23,7 +23,7 @@ $cor-azul-circulo: #d5e7f2;
 .btn {
   display: inline-block;
   background-color: $cor-destaque;
-  color: #fff;
+  color: $cor-texto;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -32,7 +32,7 @@ $cor-azul-circulo: #d5e7f2;
 }
 
 .btn:hover {
-  background-color: $cor-pressao;
+  background-color: $cor-azul-circulo;
 }
 
 .about {
