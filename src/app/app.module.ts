@@ -11,6 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 
 import { MainScreenComponent } from './components/mainScreen/mainscreen.component';
 import { FooterComponent } from './components/home/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/home/footer/footer.component';
     ServicosCarrouselComponent,
     NavComponent,
     MainScreenComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

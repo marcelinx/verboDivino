@@ -1,17 +1,16 @@
-<section class="hero">
+<section class="hero" id="home">
   <h1>{{ messages.bemVindo }}</h1>
   <a href="https://www.instagram.com/oficialverbodivino/" class="btn">
     {{ messages.sigaRede }}
   </a>
 </section>
 
-<section class="about">
+<section class="about" id="about">
   <h1>{{ messages.sobreNos }}</h1>
   <h2>{{ messages.contandoSobre }}</h2>
 
   <h3>Comunidades</h3>
   <div class="community-cards">
-    <!-- Loop para as comunidades -->
     <div class="community-card" *ngFor="let comunidade of comunidades">
       <div class="church-icon">
         <i class="fas fa-church"></i>
@@ -23,18 +22,17 @@
   </div>
 </section>
 
-
-
 <app-servicos-carrousel></app-servicos-carrousel>
 
-<section class="events">
+<section class="events" id="events">
   <h2>
     <span class="blue-circle"><i class="fas fa-place-of-worship"></i></span>
     {{ messages.eventoTitulo }}
   </h2>
   <div class="event">
     <h3>
-      <span class="blue-circle"><i class="fas fa-clock"></i></span> {{ messages.eventoMissas.titulo }}
+      <span class="blue-circle"><i class="fas fa-clock"></i></span>
+      {{ messages.eventoMissas.titulo }}
     </h3>
     <p>
       {{ messages.eventoMissas.descricao }}
@@ -49,9 +47,10 @@
     </ul>
   </div>
 
-  <div class="event">
+  <div class="event" id="event">
     <h3>
-      <span class="blue-circle"><i class="fas fa-praying-hands"></i></span> {{ messages.eventoAdoracao.titulo }}
+      <span class="blue-circle"><i class="fas fa-praying-hands"></i></span>
+      {{ messages.eventoAdoracao.titulo }}
     </h3>
     <ul>
       <li>
@@ -61,4 +60,4 @@
   </div>
 </section>
 
-<app-footer></app-footer>
+<app-footer id="contact"></app-footer>
